@@ -1,1 +1,1 @@
-# Smirk_a_Zoufalstv-_Osudu
+# Smirk_a_Zoufalstvi-_Osudu
