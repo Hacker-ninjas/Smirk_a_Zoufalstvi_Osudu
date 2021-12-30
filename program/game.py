@@ -1,5 +1,5 @@
 import pygame, sys
-from pygame.locals import *
+
 pygame.init()
 
 # nastavení okna hry, obrázků pohybu postavy a pozadí hry
