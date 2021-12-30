@@ -1,7 +1,8 @@
-import pygame
+import pygame, sys
+from pygame.locals import *
 pygame.init()
 
-win = pygame.display.set_mode((1024, 768))  # velikost okna
+win = pygame.display.set_mode((1024, 768), pygame.FULLSCREEN)  # velikost okna
 pygame.display.set_caption("Smirk a Zoufalství Osudu")   # název okna
 
 walkRight = [pygame.image.load("Smirk_a_Zoufalstvi_Osudu/graphic/smirk/R1.png"), pygame.image.load("Smirk_a_Zoufalstvi_Osudu/graphic/smirk/R2.png"), pygame.image.load("Smirk_a_Zoufalstvi_Osudu/graphic/smirk/R3.png")]  # seznam obrázků chůze doprava, načtení obrázků z jiné složky -> pygame.image.load("nazev_slozky/R9.png")
