@@ -2,9 +2,11 @@ import pygame, sys
 from pygame.locals import *
 pygame.init()
 
+# nastavení okna hry, obrázků pohybu postavy a pozadí hry
 win = pygame.display.set_mode((1024, 768), pygame.FULLSCREEN)  # velikost okna
 pygame.display.set_caption("Smirk a Zoufalství Osudu")   # název okna
-
+icon = pygame.image.load("Smirk_a_Zoufalstvi_Osudu/graphic/ico.png")    # ikona programu
+pygame.display.set_icon(icon)   # nastavení ikony
 walkRight = [pygame.image.load("Smirk_a_Zoufalstvi_Osudu/graphic/smirk/R1.png"), pygame.image.load("Smirk_a_Zoufalstvi_Osudu/graphic/smirk/R2.png"), pygame.image.load("Smirk_a_Zoufalstvi_Osudu/graphic/smirk/R3.png")]  # seznam obrázků chůze doprava, načtení obrázků z jiné složky -> pygame.image.load("nazev_slozky/R9.png")
 walkLeft = [pygame.image.load("Smirk_a_Zoufalstvi_Osudu/graphic/smirk/L1.png"), pygame.image.load("Smirk_a_Zoufalstvi_Osudu/graphic/smirk/L2.png"), pygame.image.load("Smirk_a_Zoufalstvi_Osudu/graphic/smirk/L3.png")]    # seznam obrázků chůze doleva
 walkUp = [pygame.image.load("Smirk_a_Zoufalstvi_Osudu/graphic/smirk/U1.png"), pygame.image.load("Smirk_a_Zoufalstvi_Osudu/graphic/smirk/U2.png"), pygame.image.load("Smirk_a_Zoufalstvi_Osudu/graphic/smirk/U3.png")]
