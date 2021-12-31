@@ -1,4 +1,4 @@
-import pygame, sys
+import pygame
 
 pygame.init()
 
@@ -50,6 +50,7 @@ def redrawGameWindow(): # funkce překreslení okna při pohybu postavy
 
     pygame.display.update() # obnovení displeje
 
+
 # hlavní smyčka hry
 run = True
 while run:
@@ -72,13 +73,13 @@ while run:
         up = False
         down = False
     elif keys [pygame.K_UP] and y > vel: # pohyb nahoru
-        y -= vel
+        y -= vel    # pohyb nahoru odečítá na ose y rychlostí vel
         up = True
         right = False
         left = False
         down = False
     elif keys [pygame.K_DOWN] and y < 768 - width - vel:    # pohyb dolů
-        y += vel
+        y += vel    # pohyb dolů přičítá na ose y rychlostí vel
         down = True
         up = False
         left = False
