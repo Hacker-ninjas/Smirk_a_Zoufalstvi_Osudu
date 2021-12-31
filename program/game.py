@@ -3,7 +3,7 @@ import pygame
 pygame.init()
 
 # nastavení okna hry, obrázků pohybu postavy a pozadí hry
-win = pygame.display.set_mode((1024, 768), pygame.FULLSCREEN)  # velikost okna
+screen = pygame.display.set_mode((500, 500))  # velikost okna
 pygame.display.set_caption("Smirk a Zoufalství Osudu")   # název okna
 icon = pygame.image.load("ico.png")    # ikona programu
 pygame.display.set_icon(icon)   # nastavení ikony
@@ -11,7 +11,7 @@ walkRight = [pygame.image.load("graphic/smirk/R1.png"), pygame.image.load("graph
 walkLeft = [pygame.image.load("graphic/smirk/L1.png"), pygame.image.load("graphic/smirk/L2.png"), pygame.image.load("graphic/smirk/L3.png")]    # seznam obrázků chůze doleva
 walkUp = [pygame.image.load("graphic/smirk/U1.png"), pygame.image.load("graphic/smirk/U2.png"), pygame.image.load("graphic/smirk/U3.png")]
 walkDown = [pygame.image.load("graphic/smirk/D1.png"), pygame.image.load("graphic/smirk/D2.png"), pygame.image.load("graphic/smirk/D3.png")]
-bg = pygame.image.load("graphic/texture_grass.png")    # obrázek pozadí
+bg = pygame.image.load("graphic/mapa.png")    # obrázek pozadí
 char = pygame.image.load("graphic/smirk/D2.png")    # výchozí obrázek postavy
 
 clock = pygame.time.Clock() # framerate hry
@@ -31,33 +31,33 @@ class Player(object):
         self.down = False   # proměnná pohybu dolů
         self.walkCount = 0  # počet snímků pohybu
     
-    def draw(self,win):
+    def draw(self,screen):
         # definice pohybu hráče
         if self.walkCount + 1 >= 9: # pohyb doprava a doleva má 3 obrázků a každý se bude zobrazovat 3 snímky -> 3 * 3 = 9
             self.walkCount = 0
         if self.left:
-            win.blit(walkLeft[self.walkCount//3], (self.x,self.y))
+            screen.blit(walkLeft[self.walkCount//3], (self.x,self.y))
             self.walkCount += 1
         elif self.right:
-            win.blit(walkRight[self.walkCount//3], (self.x,self.y))
+            screen.blit(walkRight[self.walkCount//3], (self.x,self.y))
             self.walkCount += 1
         elif self.up:
-            win.blit(walkUp[self.walkCount//3], (self.x,self.y))
+            screen.blit(walkUp[self.walkCount//3], (self.x,self.y))
             self.walkCount += 1
         elif self.down:
-            win.blit(walkDown[self.walkCount//3], (self.x,self.y))
+            screen.blit(walkDown[self.walkCount//3], (self.x,self.y))
             self.walkCount += 1
         else:
-            win.blit(char, (self.x,self.y))
+            screen.blit(char, (self.x,self.y))
 
-class Enemy(object):
+#class Enemy(object):
     # třída postavy nepřítele
   
 
 def redrawGameWindow():
     # funkce překreslení okna při pohybu postavy
-    win.blit(bg, (0, 0)) # vyplnění okna obrázkem bg od souřadnice 0, 0
-    man.draw(win) 
+    screen.blit(bg, (0, 0)) # vyplnění okna obrázkem bg od souřadnice 0, 0
+    man.draw(screen) 
     pygame.display.update() # obnovení displeje
 
 
