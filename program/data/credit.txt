@@ -10,11 +10,14 @@ RPG Item Pack 2 - Alex's Assets
 Gems/Coins - La Red Games
 
 -Hudba
-World background music - Benjamin Mastripolito (Lemoncreme)
 Menu music - kerri
+World background music - Benjamin Mastripolito (Lemoncreme)
+Dungeon music - 
 
 -Zvukové efekty
 
-
 -Obrázky
 Pixel Mountains menu - marccobley
+
+-Font
+Pixel Digivolve - Neale a Shayna Davidsonovi (Pixel Sagas)
