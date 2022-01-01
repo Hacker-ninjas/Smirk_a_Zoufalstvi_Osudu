@@ -3,7 +3,7 @@ import pygame
 pygame.init()
 
 # nastavení okna hry, obrázků pohybu postavy a pozadí hry
-screen = pygame.display.set_mode((500, 500))  # velikost okna
+screen = pygame.display.set_mode((800, 600))  # velikost okna
 pygame.display.set_caption("Smirk a Zoufalství Osudu")   # název okna
 icon = pygame.image.load("ico.png")    # ikona programu
 pygame.display.set_icon(icon)   # nastavení ikony
